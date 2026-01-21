@@ -1,0 +1,62 @@
+LINUX GEN-AI OS AGENT – SETUP & RUN STEPS
+
+1. Update system and install prerequisites
+------------------------------------------------
+sudo apt update
+sudo apt install -y python3-full python3-venv
+
+
+2. Create and activate Python virtual environment
+------------------------------------------------
+python3 -m venv genai-venv
+source genai-venv/bin/activate
+
+
+3. Upgrade pip inside virtual environment
+------------------------------------------------
+python -m pip install --upgrade pip
+
+
+4. Create requirements.txt file
+------------------------------------------------
+nano requirements.txt
+
+Paste the following content:
+
+langchain==0.3.25
+langchain-core==0.3.64
+langchain-community==0.3.24
+langchain-google-genai==2.1.5
+google-genai==1.19.0
+python-dotenv==1.0.1
+
+Save and exit.
+
+
+5. Install project dependencies
+------------------------------------------------
+pip install -r requirements.txt
+
+
+6. Set Google Gemini API Key (do not hardcode)
+------------------------------------------------
+export GOOGLE_API_KEY="YOUR_GEMINI_API_KEY"
+
+
+7. Create agent source file
+------------------------------------------------
+nano agent.py
+
+Paste the Linux Gen-AI OS Agent code and save.
+
+
+8. Run the Linux Gen-AI OS Agent
+------------------------------------------------
+python agent.py
+
+
+9. Use the agent
+------------------------------------------------
+- Enter Linux or Docker-related natural language commands
+- Example: "show disk usage", "list running containers"
+- Type 'exit' or 'quit' to stop the agent

@@ -1,0 +1,23 @@
+
+.............1. Install Amazon Q CLI..............
+Installing Windows Subsystem for Linux (wsl) - -- > wsl --install
+Install a virtual Ubuntu instance -- > wsl -d Ubuntu
+Enter the home directory of the wsl environment --- > cd
+Install some packages --- > sudo apt install unzip
+Download zip file with installer --- > curl --proto '=https' --tlsv1.2 -sSf https://desktop-release.codewhisperer.us-east-1.amazonaws.com/latest/q-x86_64-linux-musl.zip -o q.zip
+Unzip --- > unzip q.zip
+Subdirectory q --- > cd q
+chmod +x install.sh
+Install executable --- > ./install.sh
+Relaunch environment --- > bash
+Login --- > q login
+Chat - q chat
+
+........2. Install AWS MCP Servers - https://awslabs.github.io/mcp/.............
+
+AWS CLI - IAM Role Configuration
+Install AWS CloudFormation MCP server - https://awslabs.github.io/mcp/servers/cfn-mcp-server
+Configure the AWS CloudFormation MCP server with Amazon Q CLI by creating the MCP configuration file
+
+
+
