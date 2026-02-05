@@ -4,7 +4,7 @@ from langchain_community.tools import ShellTool
 from langchain.agents import initialize_agent
 
 # ✅ Set Google Gemini API Key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAP8OvgIZ4t_J3pE33WInTxTsHpkvrtIU8"
+os.environ["GOOGLE_API_KEY"] = "<--YourKey-->"
 
 # ✅ Gemini Model
 llm = ChatGoogleGenerativeAI(
@@ -43,3 +43,4 @@ while True:
     # Run the agent and print output only
     response = myagent.run({"input": input_message})
     print("\n🧩 Final Output:\n", response)
+
